@@ -94,7 +94,7 @@ def _embed_cli(cfg, is_cli_call=True) -> \
     return embeddings, labels, filenames
 
 
-@hydra.main(config_path='config', config_name='config')
+@hydra.main(version_base=None, config_path='config', config_name='config')
 def embed_cli(cfg) -> str:
     """Embed images from the command-line.
 

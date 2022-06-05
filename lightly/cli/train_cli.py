@@ -142,7 +142,7 @@ def _train_cli(cfg, is_cli_call=True):
     return encoder.checkpoint
 
 
-@hydra.main(config_path="config", config_name="config")
+@hydra.main(version_base=None, config_path="config", config_name="config")
 def train_cli(cfg):
     """Train a self-supervised model from the command-line.
 
